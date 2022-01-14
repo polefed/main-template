@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание страницы сайта." />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>MAIN TEMPLATE</title>
+</head>
+
+<body>
+  <div class="progress-on-scroll"></div>
+  <button class="scroll-up">
+    <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+      <path class="scroll-up__svg-path" d="
+					M24,0
+					a24,24 0 0,1 0,48
+					a24,24 0 0,1 0,-48
+				" />
+    </svg>
+  </button>
+  @@include('./html/__header.html')
+  <!-- @@include('./html/__row-text-image.html') -->
+  @@include('./html/list-row-image-text.html')
+  <!-- @@include('./html/__more.html') -->
+  <!-- @@include('./html/__catalog.html') -->
+  <!-- @@include('./html/__best.html') -->
+  <!-- @@include('./html/filter.html') -->
+  <!-- @@include('./html/accordion.html') -->
+  <!-- @@include('./html/main-form.html') -->
+  <!-- @@include('./html/list-column-image-text.html') -->
+  <!-- @@include('./html/ticker.html') -->
+  @@include('./html/popup.html')
+  @@include('./html/tabs.html')
+  <!-- @@include('./html/checkbox.html') -->
+  <!-- @@include('./html/figures.html') -->
+  @@include('./html/select.html')
+  <!-- @@include('./html/__cards.html') -->
+  <!-- @@include('./html/__catalog-2.html') -->
+  <!-- @@include('./html/cart.html') -->
+  <!-- @@include('./html/main-slider.html') -->
+  <!-- @@include('./html/pure-slider.html') -->
+  @@include('./html/pagination.html')
+  @@include('./html/__footer.html')
+  <p>
+    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Там по всей предложения города жизни живет своих свою, переписывается имени знаках жаренные переулка скатился снова послушавшись осталось? Проектах, сих несколько?
+    Которое силуэт своих букв переулка вскоре парадигматическая маленькая лучше власти семь курсивных. Он, ты, пор которое великий своего предупредила на берегу пояс все ему буквоград рыбного эта путь вершину пустился дороге.
+    Снова толку, лучше переулка безорфографичный языком рукопись всеми рыбными по всей составитель имени языкового пустился не семь, страну встретил сбить, наш за меня. Имеет даже раз, пор прямо щеке города бросил.
+  </p>
+  <p class="dotted-title">
+    <span class="dotted-title__text">Text</span>
+    <span class="dotted-title__number">444</span>
+  </p>
+  <div class="header-padding"></div>
+  <div class="main-navigation container">
+    @@include('./html/breadcrumbs.html')
+    <a class="return-link hover-svg hover-color" href="#">
+      Return
+    </a>
+  </div>
+  <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
+  <div class="cnt">
+    <input id="cnt1" type="checkbox" class="cnt-input">
+    <label for="cnt1" class="cnt-label">Label 1</label>
+    <input id="cnt2" type="checkbox" class="cnt-input">
+    <label for="cnt2" class="cnt-label">Label 2</label>
+    <input id="cnt3" type="checkbox" class="cnt-input">
+    <label for="cnt3" class="cnt-label">Label 3</label>
+    <span>=</span>
+    <output class="cnt-output"></output>
+  </div>
+  <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
+  <ul class="load-list container">
+    <li class="load-list__item">
+      <img src="img/1x1.png" loading="lazy" alt="image">
+    </li>
+  </ul>
+  <button class="load-button"></button>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js" defer></script>
+</body>
+
+</html>

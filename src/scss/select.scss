@@ -1,0 +1,187 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// select
+// #choiseSwitch {
+//   display: none;
+//   &:checked ~ .choise {
+//      background-color: green;
+//   }
+// }
+.choise {
+  display: inline-block;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    pointer-events: none;
+  }
+}
+.choise-select {
+  padding: 10px 25px 10px 10px;
+  background-color: gray;
+  color: white;
+  // background: gray url(https://via.placeholder.com/55) right 10px top 50%/10px no-repeat;
+
+  &__option {
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// pure select
+
+.pure-select {
+  display: inline-grid;
+  background-color: gray;
+  color: white;
+  position: relative;
+  &__switch {
+    display: none;
+    // &:checked ~ .pure-select__button {
+    //   display: block;
+    // }
+  }
+  &__button {
+    transition: var(--transition-2);
+    max-height: 0;
+  }
+}
+
+// .pure-select__button-1 {
+//   max-height: 100vh;
+// }
+
+// #select1:checked ~ .pure-select__button {
+//   max-height: 100vh;
+// }
+
+// #select1:checked ~ .pure-select__button-1,
+// #select2:checked ~ .pure-select__button-2,
+// #select3:checked ~ .pure-select__button-3,
+// #select4:checked ~ .pure-select__button-4 {
+//   max-height: 100vh;
+// }
+
+#selectDrop {
+  display: none;
+  &:checked ~ .pure-select__drop-button {
+    display: none;
+  }
+  &:checked ~ .pure-select__button {
+    max-width: 100vh;
+  }
+}
+.pure-select__drop-button {
+  position: absolute;
+  z-index: 1;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  background-color: gray;
+  color: white;
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+:root {
+  font-size: calc(10px + 1vmin);
+  --primary: rgba(119, 51, 255, 100);
+  --primary-63: rgba(119, 51, 255, 63);
+  --primary-37: rgba(119, 51, 255, 37);
+  --softGrey: #9a97a8;
+  --softTint: rgba(0, 0, 0, 0.2);
+  --bounce: 0.4s cubic-bezier(0.3, 0.3, 0.1, 1);
+  --ease: 0.2s cubic-bezier(0.3, 0.1, 0.3, 1);
+}
+
+.custom-select__switch {
+  display: none;
+}
+
+.select-outer {
+  --itemHeight: 2;
+  --radius: 0.4em;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 6em;
+  height: calc(var(--itemHeight) * 1em);
+  font-size: calc(var(--itemHeight) * 1em);
+  line-height: var(--itemHeight);
+  border-radius: var(--radius);
+  background: var(--primary-63);
+}
+.select-outer:hover label::before {
+  background: var(--primary-37);
+}
+.select-outer::before,
+.select-outer::after {
+  content: "";
+  box-sizing: content-box;
+  font-size: 0.25em;
+  width: 0;
+  height: 0;
+  position: absolute;
+  color: white;
+  border: 1em solid transparent;
+  border-bottom-color: white;
+  z-index: 2;
+  right: 2em;
+  transform: translateY(-1.5em);
+}
+.select-outer::after {
+  border: 1em solid transparent;
+  border-top-color: white;
+  transform: translateY(1.5em);
+}
+[role="select"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--bounce);
+}
+[role="select"] label {
+  cursor: pointer;
+  text-transform: capitalize;
+  color: white;
+  width: 100%;
+  height: var(--itemHeight);
+}
+[role="select"] label::before {
+  display: block;
+  content: attr(for);
+  padding: 0 0.5em;
+  transition: var(--ease);
+}
+[role="select"] label:first-of-type::before {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+[role="select"] label:last-of-type::before {
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+#easy:checked ~ .select-outer [role="select"] {
+  transform: translateY(0em);
+}
+#normal:checked ~ .select-outer [role="select"] {
+  transform: translateY(-2em);
+}
+#hard:checked ~ .select-outer [role="select"] {
+  transform: translateY(-4em);
+}
+#expert:checked ~ .select-outer [role="select"] {
+  transform: translateY(-6em);
+}

@@ -1,0 +1,89 @@
+// main form
+.main-form {
+  max-width: 400px;
+  display: grid;
+  gap: 10px;
+  &__block {
+    position: relative;
+    height: 50px;
+  }
+  &__block-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    padding: 0 3px;
+    color: gray;
+    background-color: var(--color-2);
+    transition: top var(--transition-1);
+  }
+  &__block-input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    border: 2px solid gray;
+    color: gold;
+    background: transparent;
+    transition: border var(--transition-2);
+    &::placeholder {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:focus,
+    &:valid {
+      border: 2px solid gold;
+      & + .main-form__block-label {
+        top: 0;
+        z-index: 5;
+        color: gold;
+      }
+    }
+  }
+  &__area {
+    position: relative;
+    min-height: 100px;
+  }
+  &__area-label {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    padding: 0 3px;
+    color: gray;
+    background-color: white;
+    transition: top var(--transition-2);
+  }
+  &__area-textarea {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: 2px solid gray;
+    color: gold;
+    background: transparent;
+    transition: border var(--transition-2);
+    &::placeholder {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:focus,
+    &:valid {
+      border: 2px solid gold;
+      & + .main-form__area-label {
+        top: -10%;
+        z-index: 5;
+        color: gold;
+      }
+    }
+  }
+  &__submit {
+    padding: 5px;
+    border: 2px solid gray;
+  }
+}
