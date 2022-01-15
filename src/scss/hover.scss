@@ -92,11 +92,11 @@
 
 // hover typing text
 
-.hover-typing-text {
+*[data-typing-text] {
   position: relative;
   &:before {
     position: absolute;
-    content: attr(data-text);
+    content: attr(data-typing-text);
     overflow: hidden;
     white-space: nowrap;
   }

@@ -23,7 +23,14 @@
     </svg>
   </button>
   @@include('./html/__header.html')
-  <!-- @@include('./html/__row-text-image.html') -->
+  <div class="header-padding"></div>
+  <div class="main-navigation container">
+    @@include('./html/breadcrumbs.html')
+    <a class="return-link hover-svg hover-color" href="#">
+      Return
+    </a>
+  </div>
+  @@include('./html/__row-text-image.html')
   <!-- @@include('./html/list-row-image-text.html') -->
   <!-- @@include('./html/__more.html') -->
   <!-- @@include('./html/__catalog.html') -->
@@ -54,13 +61,6 @@
     <span class="dotted-title__text">Text</span>
     <span class="dotted-title__number">444</span>
   </p>
-  <div class="header-padding"></div>
-  <div class="main-navigation container">
-    @@include('./html/breadcrumbs.html')
-    <a class="return-link hover-svg hover-color" href="#">
-      Return
-    </a>
-  </div>
   <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
   <div class="cnt">
     <input id="cnt1" type="checkbox" class="cnt-input">
@@ -73,12 +73,9 @@
     <output class="cnt-output"></output>
   </div>
   <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
-  <ul class="load-list container">
-    <li class="load-list__item">
-      <img src="img/1x1.png" loading="lazy" alt="image">
-    </li>
-  </ul>
-  <button class="load-button"></button>
+
+  <!-- @@include('./html/infinite-scroll.html') -->
+
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/app.min.js" defer></script>
 </body>

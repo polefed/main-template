@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание страницы сайта." />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220114203504" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20220114203504">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220115154432" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220115154432">
   <title>MAIN TEMPLATE</title>
 </head>
 
@@ -27,8 +27,6 @@
     <a class="header__logo logo responsive-1" href="#">
       <picture><source srcset="img/1x1.webp" type="image/webp"><img src="img/1x1.png" loading="lazy" alt="image"></picture>
     </a>
-    <a class="header__container-link hover-underline-2 hover-typing-text" data-text="data-text-link-1"
-      href="#">data-text-link 1</a>
     <div class="search">
       <input id="searchSwitch" type="checkbox">
       <div class="search__block">
@@ -45,7 +43,7 @@
         </svg>
       </label>
     </div>
-    <input id="navigationSwitch" data-toggle='.navigation' type="checkbox">
+    <input id="navigationSwitch" type="checkbox">
     <label class="toggle-overlay navigation-overlay" for="navigationSwitch"></label>
     <nav class="navigation">
       <ul class="navigation__list">
@@ -75,7 +73,7 @@
       </span>
       <span class="user-button__text">Пользователь</span>
     </label>
-    <!-- <label class="user-overlay toggle-overlay" for="userSwitch"></label> -->
+    <label class="user-overlay toggle-overlay" for="userSwitch"></label>
     <div class="authorization">
       <input id="filterLogin" class="authorization__switch" name="loginRegistration" type="radio" checked>
       <input id="filterRegistration" class="authorization__switch" name="loginRegistration" type="radio">
@@ -158,7 +156,38 @@
     </div>
   </div>
 </header>
-  
+  <div class="header-padding"></div>
+  <div class="main-navigation container">
+    <ul class="breadcrumbs">
+  <input id="breadcrumbsSwitch" type="checkbox">
+  <!-- <label class="breadcrumbs-overlay toggle-overlay" for="breadcrumbsSwitch"></label> -->
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link hover-underline-2 hover-link" href="index.html">Catalog</a>
+  </li>
+  <div class="breadcrumbs__line"></div>
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link hover-underline-2" href="#">Cards</a>
+  </li>
+  <div class="breadcrumbs__line"></div>
+  <label class="breadcrumbs__current" for="breadcrumbsSwitch">
+    Card
+  </label>
+</ul>
+    <a class="return-link hover-svg hover-color" href="#">
+      Return
+    </a>
+  </div>
+  <section class="row-text-image section">
+  <div class="row-text-image__container container">
+    <div class="row-text-image__information">
+      <p class="row-text-image__information-title">Title</p>
+      <p class="row-text-image__information-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat.</p>
+      <a class="row-text-image__information-link hover-background-1" href="#">Link</a>
+    </div>
+    <picture><source srcset="img/about__image.webp" type="image/webp"><img class="row-text-image__image" src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" alt="image"></picture>
+    <!-- <video src="files/font_awesome_flutter.mp4" loop muted autoplay controls></video> -->
+  </div>
+</section>
   
   
   
@@ -313,18 +342,31 @@
   <input id="choiceSwitch4" class="choice__switch" name="choice" type="radio">
   <input id="choiceSwitch5" class="choice__switch" name="choice" type="radio">
 
-  <input id="choiceSwitch" type="checkbox">
-  <label class="choice-button" for="choiceSwitch">Сhoose a category</label>
+  <input id="choiceDropSwitch" type="checkbox">
+  <label class="choice-drop-button" for="choiceDropSwitch">Сhoose a category</label>
+
+  <label class="choice-overlay" for="choiceDropSwitch"></label>
   
   <div class="choice__select">
-    <label class="choice__select-option choice__select-option-1" data-display='block' for="choiceSwitch1">Category 1</label>
-    <label class="choice__select-option choice__select-option-2" data-display='block' for="choiceSwitch2">Category 2</label>
-    <label class="choice__select-option choice__select-option-3" data-display='block' for="choiceSwitch3">Category 3</label>
-    <label class="choice__select-option choice__select-option-4" data-display='block' for="choiceSwitch4">Category 4</label>
-    <label class="choice__select-option choice__select-option-5" data-display='block' for="choiceSwitch5">Category 5</label>
+    <label class="choice__select-option choice__select-option-1" data-display='' for="choiceSwitch1">Category 1</label>
+    <label class="choice__select-option choice__select-option-2" data-display='' for="choiceSwitch2">Category 2</label>
+    <label class="choice__select-option choice__select-option-3" data-display='' for="choiceSwitch3">Category 3</label>
+    <label class="choice__select-option choice__select-option-4" data-display='' for="choiceSwitch4">Category 4</label>
+    <label class="choice__select-option choice__select-option-5" data-display='none' for="choiceSwitch5">Category 5</label>
   </div>
 
 </div>
+
+
+
+
+<select>
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+  <option>Option 4</option>
+  <option>Option 5</option>
+</select>
   
   
   
@@ -418,27 +460,6 @@
     <span class="dotted-title__text">Text</span>
     <span class="dotted-title__number">444</span>
   </p>
-  <div class="header-padding"></div>
-  <div class="main-navigation container">
-    <ul class="breadcrumbs">
-  <input id="breadcrumbsSwitch" type="checkbox">
-  <!-- <label class="breadcrumbs-overlay toggle-overlay" for="breadcrumbsSwitch"></label> -->
-  <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link hover-underline-2 hover-link" href="index.html">Catalog</a>
-  </li>
-  <div class="breadcrumbs__line"></div>
-  <li class="breadcrumbs__item">
-    <a class="breadcrumbs__link hover-underline-2" href="#">Cards</a>
-  </li>
-  <div class="breadcrumbs__line"></div>
-  <label class="breadcrumbs__current" for="breadcrumbsSwitch">
-    Card
-  </label>
-</ul>
-    <a class="return-link hover-svg hover-color" href="#">
-      Return
-    </a>
-  </div>
   <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
   <div class="cnt">
     <input id="cnt1" type="checkbox" class="cnt-input">
@@ -451,14 +472,11 @@
     <output class="cnt-output"></output>
   </div>
   <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
-  <ul class="load-list container">
-    <li class="load-list__item">
-      <picture><source srcset="img/1x1.webp" type="image/webp"><img src="img/1x1.png" loading="lazy" alt="image"></picture>
-    </li>
-  </ul>
-  <button class="load-button"></button>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220114203504"></script>
-  <script src="js/app.min.js?_v=20220114203504" defer></script>
+
+  
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220115154432"></script>
+  <script src="js/app.min.js?_v=20220115154432" defer></script>
 </body>
 
 </html>

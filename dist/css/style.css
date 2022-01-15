@@ -181,14 +181,6 @@ body.__lock {
   overflow: hidden;
 }
 
-.display-none {
-  display: none;
-}
-
-.display-block {
-  display: block;
-}
-
 .section {
   padding: 5rem 0;
 }
@@ -305,14 +297,14 @@ body.__lock {
   background-color: red;
 }
 
-.hover-typing-text {
+*[data-typing-text] {
   position: relative;
   transition: var(--transition-1);
 }
 
-.hover-typing-text:before {
+*[data-typing-text]:before {
   position: absolute;
-  content: attr(data-text);
+  content: attr(data-typing-text);
   overflow: hidden;
   white-space: nowrap;
 }
@@ -525,7 +517,6 @@ body.__lock {
 }
 
 .toggle-overlay {
-  display: block;
   position: fixed;
   left: 0;
   top: 0;
@@ -664,7 +655,7 @@ body.__lock {
   transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-1);
+  transition: opacity var(--transition-1), visibility var(--transition-1);
 }
 
 *[data-tooltip]:before {
@@ -777,50 +768,68 @@ body.__lock {
   fill: white;
 }
 
-#choiceSwitch {
+#choiceDropSwitch {
   display: none;
 }
 
-#choiceSwitch:checked ~ .choice-button {
-  background-color: brown;
+#choiceDropSwitch:checked ~ .choice-drop-button {
+  background-color: coral;
   color: white;
   opacity: 1;
 }
 
-#choiceSwitch:checked ~ .choice-button:after {
+#choiceDropSwitch:checked ~ .choice-drop-button:after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-#choiceSwitch:checked ~ .choice__select {
+#choiceDropSwitch:checked ~ .choice__select {
   top: calc(100% + 5px);
 }
 
-#choiceSwitch:checked ~ .choice__select .choice__select-option {
+#choiceDropSwitch:checked ~ .choice__select .choice__select-option {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   opacity: 1;
   visibility: visible;
   max-height: 100vh;
   padding: 10px;
 }
 
-#choiceSwitch:checked ~ .choice__select .choice__select-option:not(:last-child) {
+#choiceDropSwitch:checked ~ .choice__select .choice__select-option:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.choice-button {
+#choiceDropSwitch:checked ~ .choice-overlay {
+  z-index: 9;
+  opacity: 1;
+  visibility: visible;
+}
+
+.choice-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200vw;
+  height: 200vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-2), visibility var(--transition-2);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.choice-drop-button {
   display: block;
   padding: 10px 30px 10px 10px;
   color: transparent;
   border-radius: 10px;
-  transition: var(--transition-2);
+  transition: opacity var(--transition-2), background-color var(--transition-2), color var(--transition-2);
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
-.choice-button:after {
+.choice-drop-button:after {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   content: "";
   right: 10px;
   top: 50%;
@@ -830,12 +839,12 @@ body.__lock {
   -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
           clip-path: polygon(0 0, 50% 100%, 100% 0);
   background-color: white;
-  transition: var(--transition-2);
+  transition: transform var(--transition-2);
 }
 
 .choice {
   max-width: 200px;
-  margin: 50px auto;
+  margin: 20px auto;
   position: relative;
 }
 
@@ -848,21 +857,18 @@ body.__lock {
   top: 0;
   left: 0;
   width: 100%;
-  transition: var(--transition-2);
+  transition: top var(--transition-2);
 }
 
 .choice__select-option {
+  display: block;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: gray;
   color: white;
   transition: var(--transition-2);
   opacity: 0;
   visibility: hidden;
   max-height: 0;
-  padding: 0;
 }
 
 #tabsSwitch1:checked ~ .tabs__slider .tabs__slider-title-1,
@@ -1330,6 +1336,8 @@ body.__lock {
 .header__logo {
   flex: 0 0 5rem;
   height: 5rem;
+  border: 2px solid brown;
+  border-radius: 50%;
 }
 
 #navigationSwitch {
@@ -1523,6 +1531,8 @@ body.__lock {
 .user-button__image {
   width: 30px;
   height: 30px;
+  border: 2px solid brown;
+  border-radius: 50%;
 }
 
 .authorization {
@@ -3074,11 +3084,11 @@ body.__lock {
     background-position: left bottom;
   }
 
-  .hover-typing-text:hover {
+  *[data-typing-text]:hover {
     color: inherit;
   }
 
-  .hover-typing-text:hover:before {
+  *[data-typing-text]:hover:before {
     color: red;
     -webkit-animation: typingAnimation var(--transition-2) steps(50) forwards;
             animation: typingAnimation var(--transition-2) steps(50) forwards;
@@ -3107,10 +3117,19 @@ body.__lock {
 
   *[data-tooltip]:hover:before,
   *[data-tooltip]:hover:after {
-    z-index: 1;
+    z-index: 10;
     opacity: 1;
     visibility: visible;
     cursor: help;
+  }
+
+  #choiceDropSwitch:checked ~ .choice-drop-button:hover {
+    background-color: orange;
+  }
+
+  .choice-drop-button:hover {
+    background-color: orange;
+    color: white;
   }
 
   .choice__select-option:hover {
