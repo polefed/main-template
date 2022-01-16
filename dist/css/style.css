@@ -871,14 +871,6 @@ body.__lock {
   max-height: 0;
 }
 
-#tabsSwitch1:checked ~ .tabs__slider .tabs__slider-title-1,
-#tabsSwitch2:checked ~ .tabs__slider .tabs__slider-title-2,
-#tabsSwitch3:checked ~ .tabs__slider .tabs__slider-title-3,
-#tabsSwitch4:checked ~ .tabs__slider .tabs__slider-title-4,
-#tabsSwitch5:checked ~ .tabs__slider .tabs__slider-title-5 {
-  display: block;
-}
-
 #tabsSwitch1:checked ~ .tabs__navigation .tabs__navigation-button-1,
 #tabsSwitch2:checked ~ .tabs__navigation .tabs__navigation-button-2,
 #tabsSwitch3:checked ~ .tabs__navigation .tabs__navigation-button-3,
@@ -907,48 +899,49 @@ body.__lock {
   padding: 10px;
 }
 
-.tabs {
-  max-width: 500px;
-  padding: 0 10px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.tabs #tabsSwitch {
+#tabsDropSwitch {
   display: none;
 }
 
-.tabs #tabsSwitch:checked ~ .tabs-button {
-  background-color: brown;
+#tabsDropSwitch:checked ~ .tabs-drop-button {
+  background-color: coral;
+  color: white;
+  opacity: 1;
 }
 
-.tabs #tabsSwitch:checked ~ .tabs-button:after {
+#tabsDropSwitch:checked ~ .tabs-drop-button:after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-.tabs #tabsSwitch:checked ~ .tabs__navigation .tabs__navigation-button {
+#tabsDropSwitch:checked ~ .tabs__navigation {
+  position: relative;
+  padding: 0;
+}
+
+#tabsDropSwitch:checked ~ .tabs__navigation .tabs__navigation-button {
   opacity: 1;
   visibility: visible;
   max-height: 100vh;
   padding: 10px;
+  position: relative;
+  z-index: 10;
 }
 
-.tabs #tabsSwitch:checked ~ .tabs__navigation .tabs__navigation-button:not(:last-child) {
-  margin-bottom: 5px;
+#tabsDropSwitch:checked ~ .tabs__navigation .tabs__navigation-button:not(:first-child) {
+  margin-top: 5px;
 }
 
-.tabs .tabs-button {
+.tabs-drop-button {
+  display: block;
   padding: 10px 30px 10px 10px;
-  align-self: start;
-  background-color: gray;
-  color: white;
+  transition: var(--transition-2);
+  color: transparent;
   border-radius: 10px;
   position: relative;
+  z-index: 10;
 }
 
-.tabs .tabs-button:after {
+.tabs-drop-button:after {
   position: absolute;
   content: "";
   right: 10px;
@@ -962,21 +955,22 @@ body.__lock {
   transition: var(--transition-2);
 }
 
+.tabs {
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
 .tabs__switch {
   display: none;
 }
 
-.tabs__slider-title {
-  display: none;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  background-color: brown;
-  color: white;
-  transition: var(--transition-2);
-}
-
 .tabs__navigation-button {
+  display: block;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -1102,27 +1096,54 @@ body.__lock {
   display: none;
 }
 
-#filterSwitch {
+#filterDropSwitch {
   display: none;
 }
 
-#filterSwitch:checked ~ .transform-navigation .filter-button {
-  background-color: brown;
+#filterDropSwitch:checked ~ .filter__navigation .filter-drop-button {
+  background-color: coral;
+  color: white;
+  opacity: 1;
 }
 
-#filterSwitch:checked ~ .transform-navigation .filter-button:after {
+#filterDropSwitch:checked ~ .filter__navigation .filter-drop-button:after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-#filterSwitch:checked ~ .filter__navigation .filter__navigation-button {
+#filterDropSwitch:checked ~ .filter__navigation .filter__navigation-button {
   opacity: 1;
   visibility: visible;
   max-height: 100vh;
   padding: 10px;
+  position: relative;
 }
 
-#filterSwitch:checked ~ .filter__navigation .filter__navigation-button:not(:last-child) {
-  margin-bottom: 5px;
+#filterDropSwitch:checked ~ .filter__navigation .filter__navigation-button:not(:first-child) {
+  margin-top: 5px;
+}
+
+.filter-drop-button {
+  display: block;
+  transition: var(--transition-2);
+  color: transparent;
+  padding: 10px 30px 10px 10px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.filter-drop-button:after {
+  position: absolute;
+  content: "";
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+          clip-path: polygon(0 0, 50% 100%, 100% 0);
+  background-color: white;
+  transition: var(--transition-2);
 }
 
 .filter {
@@ -1130,7 +1151,6 @@ body.__lock {
   padding: 0 10px;
   margin: 50px auto;
   display: flex;
-  flex-direction: column;
   gap: 5px;
 }
 
@@ -1140,6 +1160,7 @@ body.__lock {
 
 .filter__navigation {
   background-color: white;
+  position: relative;
 }
 
 .filter__navigation-button {
@@ -1175,30 +1196,7 @@ body.__lock {
 #transformSwitch1:checked ~ .transform-navigation .transform-navigation__button-1,
 #transformSwitch2:checked ~ .transform-navigation .transform-navigation__button-2 {
   background-color: brown;
-}
-
-.filter-button {
-  flex: 1 1 auto;
-  align-self: start;
-  padding: 10px 30px 10px 10px;
-  background-color: gray;
-  border-radius: 10px;
-  color: white;
-  position: relative;
-}
-
-.filter-button:after {
-  position: absolute;
-  content: "";
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-          clip-path: polygon(0 0, 50% 100%, 100% 0);
-  background-color: white;
-  transition: var(--transition-2);
+  cursor: default;
 }
 
 .transform-navigation {
@@ -1209,11 +1207,12 @@ body.__lock {
 }
 
 .transform-navigation__button {
-  flex: 0 0 30px;
+  flex: 0 1 50%;
   height: 30px;
   background-color: gray;
   border-radius: 10px;
   transition: var(--transition-2);
+  transition: background-color var(--transition-2);
   position: relative;
 }
 
@@ -2583,18 +2582,12 @@ body.__lock {
   display: flex;
 }
 
-@media (min-width: 481px) {
-  .filter__content {
-    grid-column: span 2;
-  }
-}
-
 @media (min-width: 769px) {
   .display-grid-1 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .tabs .tabs-button {
+  .tabs-drop-button {
     display: none;
   }
 
@@ -2602,6 +2595,14 @@ body.__lock {
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+
+  .filter-drop-button {
+    display: none;
+  }
+
+  .filter {
+    flex-direction: column;
   }
 
   .filter__navigation {
@@ -2612,10 +2613,6 @@ body.__lock {
 
   .filter__content {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .filter-button {
-    display: none;
   }
 
   .transform-navigation {
@@ -2760,12 +2757,21 @@ body.__lock {
     padding: 10px;
   }
 
+  .tabs__navigation {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+    transition: top var(--transition-2);
+  }
+
   .tabs__navigation-button {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
     padding: 0;
-    flex: 1 1 100%;
   }
 
   #filterSwitch1:checked ~ .filter__navigation .filter__navigation-button-1,
@@ -2786,8 +2792,11 @@ body.__lock {
   }
 
   .filter {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+  }
+
+  .filter__navigation {
+    flex: 1 1 auto;
   }
 
   .filter__navigation-button {
@@ -2795,7 +2804,16 @@ body.__lock {
     visibility: hidden;
     max-height: 0;
     padding: 0;
-    text-align: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .filter__content {
+    flex: 1 1 100%;
   }
 
   #transformSwitch1:checked ~ .filter__content {
@@ -2820,6 +2838,10 @@ body.__lock {
   #transformSwitch1:checked ~ .filter__content .filter__content-item {
     flex: 0 0 100%;
     scroll-snap-align: center;
+  }
+
+  .transform-navigation {
+    flex: 0 0 65px;
   }
 
   .navigation {
@@ -3001,18 +3023,8 @@ body.__lock {
 }
 
 @media (max-width: 480px) {
-  .filter {
-    grid-template-columns: repeat(1, 1fr);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .filter-button {
+  .filter-drop-button {
     flex: 1 1 100%;
-  }
-
-  .transform-navigation {
-    order: -1;
   }
 
   .authorization {
@@ -3136,6 +3148,15 @@ body.__lock {
     background-color: red;
   }
 
+  #tabsDropSwitch:checked ~ .tabs-drop-button:hover {
+    background-color: orange;
+  }
+
+  .tabs-drop-button:hover {
+    background-color: orange;
+    color: white;
+  }
+
   .tabs__navigation-button:hover {
     background-color: red;
   }
@@ -3148,7 +3169,20 @@ body.__lock {
     background-color: gold;
   }
 
+  #filterDropSwitch:checked ~ .filter__navigation .filter-drop-button:hover {
+    background-color: orange;
+  }
+
+  .filter-drop-button:hover {
+    background-color: orange;
+    color: white;
+  }
+
   .filter__navigation-button:hover {
+    background-color: red;
+  }
+
+  .transform-navigation__button:hover {
     background-color: red;
   }
 

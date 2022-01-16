@@ -1,4 +1,5 @@
 <div class="filter">
+
   <input id="filterSwitchAll" class="filter__switch" name="filter" type="radio" checked>
   <input id="filterSwitch1" class="filter__switch" name="filter" type="radio">
   <input id="filterSwitch2" class="filter__switch" name="filter" type="radio">
@@ -10,10 +11,12 @@
   <input id="filterSwitch8" class="filter__switch" name="filter" type="radio">
   <input id="filterSwitch9" class="filter__switch" name="filter" type="radio">
   <input id="filterSwitch10" class="filter__switch" name="filter" type="radio">
-  <input id="filterSwitch" type="checkbox">
+  <input id="filterDropSwitch" type="checkbox">
   <input id="transformSwitch1" class="transform-switch" type="radio" name="transformSwitch" checked>
   <input id="transformSwitch2" class="transform-switch" type="radio" name="transformSwitch">
+
   <div class="filter__navigation">
+    <label class="filter-drop-button" for="filterDropSwitch">Choose a category</label>
     <label class="filter__navigation-button filter__navigation-all" data-display='' for="filterSwitchAll">All</label>
     <label class="filter__navigation-button filter__navigation-button-1" data-display='' for="filterSwitch1">Category 1</label>
     <label class="filter__navigation-button filter__navigation-button-2" data-display='' for="filterSwitch2">Category 2</label>
@@ -26,11 +29,12 @@
     <label class="filter__navigation-button filter__navigation-button-4" data-display='none' for="filterSwitch9">Category 9</label>
     <label class="filter__navigation-button filter__navigation-button-4" data-display='none' for="filterSwitch10">Category 10</label>
   </div>
+
   <div class="transform-navigation">
-    <label class="filter-button" for="filterSwitch">Category</label>
     <label class="transform-navigation__button transform-navigation__button-1" for="transformSwitch1"></label>
     <label class="transform-navigation__button transform-navigation__button-2" for="transformSwitch2"></label>
   </div>
+
   <div class="filter__content">
     <div class="filter__content-item filter__content-item-1" data-display=''>Content 1</div>
     <div class="filter__content-item filter__content-item-2" data-display=''>Content 2</div>
