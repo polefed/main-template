@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание страницы сайта." />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220116194941" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20220116194941">
+  <link rel="icon" href="data:;base64,=">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220117150137" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220117150137">
   <title>MAIN TEMPLATE</title>
 </head>
 
@@ -177,6 +178,22 @@
       Return
     </a>
   </div>
+  
+
+
+<div class="total-counter">
+
+  <input id="totalCounter1" type="checkbox" class="total-counter__switch">
+  <input id="totalCounter2" type="checkbox" class="total-counter__switch">
+  <input id="totalCounter3" type="checkbox" class="total-counter__switch">
+
+  <label for="totalCounter1" class="total-counter__button total-counter__button-1">Button 1</label>
+  <label for="totalCounter2" class="total-counter__button total-counter__button-2">Button 2</label>
+  <label for="totalCounter3" class="total-counter__button total-counter__button-3">Button 3</label>
+
+  <output class="total-counter__output"></output>
+
+</div>
   <section class="row-text-image section">
   <div class="row-text-image__container container">
     <div class="row-text-image__information">
@@ -184,7 +201,12 @@
       <p class="row-text-image__information-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat.</p>
       <a class="row-text-image__information-link hover-background-1" href="#">Link</a>
     </div>
-    <picture><source srcset="img/about__image.webp" type="image/webp"><img class="row-text-image__image" src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" alt="image"></picture>
+    <!-- <picture><source srcset="img/about__image.webp" type="image/webp"><img class="row-text-image__img" src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" alt="image"></picture> -->
+    
+    <div class="row-text-image__media responsive-1">
+      <video class="row-text-image__media-video" loop src="files/js-100-sec.mp4" ></video>
+      <button class="row-text-image__media-play"></button>
+    </div>
     <!-- <video src="files/font_awesome_flutter.mp4" loop muted autoplay controls></video> -->
   </div>
 </section>
@@ -471,22 +493,12 @@
     <span class="dotted-title__number">444</span>
   </p>
   <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
-  <div class="cnt">
-    <input id="cnt1" type="checkbox" class="cnt-input">
-    <label for="cnt1" class="cnt-label">Label 1</label>
-    <input id="cnt2" type="checkbox" class="cnt-input">
-    <label for="cnt2" class="cnt-label">Label 2</label>
-    <input id="cnt3" type="checkbox" class="cnt-input">
-    <label for="cnt3" class="cnt-label">Label 3</label>
-    <span>=</span>
-    <output class="cnt-output"></output>
-  </div>
   <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
 
   
 
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220116194941"></script>
-  <script src="js/app.min.js?_v=20220116194941" defer></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220117150137"></script>
+  <script src="js/app.min.js?_v=20220117150137" defer></script>
 </body>
 
 </html>
