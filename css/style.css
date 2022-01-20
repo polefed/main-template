@@ -1740,6 +1740,31 @@ body.__lock {
   display: none;
 }
 
+.error-404 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.error-404__info {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-404__info-title {
+  text-align: center;
+  font-size: 10rem;
+  line-height: 150%;
+}
+
+.error-404__info-text {
+  color: gray;
+  font-size: 4rem;
+  line-height: 100%;
+}
+
 #pureSliderSwitch1:checked ~ .pure-slider__slide-1,
 #pureSliderSwitch2:checked ~ .pure-slider__slide-2,
 #pureSliderSwitch3:checked ~ .pure-slider__slide-3,
