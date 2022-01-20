@@ -14,50 +14,47 @@
 
 <body>
   <div class="progress-on-scroll"></div>
-  <button class="scroll-up">
-    <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
-      <path class="scroll-up__svg-path" d="
-					M24,0
-					a24,24 0 0,1 0,48
-					a24,24 0 0,1 0,-48
-				" />
-    </svg>
-  </button>
+  @@include('./html/components/scroll-up.html')
   @@include('./html/__header.html')
   <div class="header-padding"></div>
   <div class="main-navigation container">
-    @@include('./html/breadcrumbs.html')
-    <a class="return-link hover-svg hover-color" href="#">
-      Return
+    @@include('./html/components/breadcrumbs.html')
+    <a class="return-link hover-svg hover-color" target="_blank" href="404.html">
+      Return ( error 400 )
     </a>
   </div>
-  @@include('./html/counter.html')
+  <!-- @@include('./html/components/table.html') -->
+  @@include('./html/components/counter.html')
   @@include('./html/__row-text-image.html')
   <!-- @@include('./html/list-row-image-text.html') -->
   <!-- @@include('./html/__more.html') -->
   <!-- @@include('./html/__catalog.html') -->
   <!-- @@include('./html/__best.html') -->
-  @@include('./html/filter.html')
-  <!-- @@include('./html/accordion.html') -->
+  @@include('./html/components/filter.html')
+  <!-- @@include('./html/components/accordion.html') -->
   <!-- @@include('./html/main-form.html') -->
   <!-- @@include('./html/list-column-image-text.html') -->
-  <!-- @@include('./html/ticker.html') -->
-  @@include('./html/popup.html')
-  @@include('./html/tabs.html')
-  <!-- @@include('./html/checkbox.html') -->
+  <!-- @@include('./html/components/ticker.html') -->
+  @@include('./html/components/popup.html')
+  @@include('./html/components/tabs.html')
+  <!-- @@include('./html/components/checkbox.html') -->
   <!-- @@include('./html/figures.html') -->
-  @@include('./html/select.html')
+  @@include('./html/components/select.html')
   <!-- @@include('./html/__cards.html') -->
   <!-- @@include('./html/__catalog-2.html') -->
   <!-- @@include('./html/cart.html') -->
   <!-- @@include('./html/main-slider.html') -->
-  <!-- @@include('./html/pure-slider.html') -->
-  @@include('./html/pagination.html')
+  <!-- @@include('./html/components/pure-slider.html') -->
+  @@include('./html/components/pagination.html')
   @@include('./html/__footer.html')
   <p>
-    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Там по всей предложения города жизни живет своих свою, переписывается имени знаках жаренные переулка скатился снова послушавшись осталось? Проектах, сих несколько?
-    Которое силуэт своих букв переулка вскоре парадигматическая маленькая лучше власти семь курсивных. Он, ты, пор которое великий своего предупредила на берегу пояс все ему буквоград рыбного эта путь вершину пустился дороге.
-    Снова толку, лучше переулка безорфографичный языком рукопись всеми рыбными по всей составитель имени языкового пустился не семь, страну встретил сбить, наш за меня. Имеет даже раз, пор прямо щеке города бросил.
+    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Там по всей предложения города
+    жизни живет своих свою, переписывается имени знаках жаренные переулка скатился снова послушавшись осталось?
+    Проектах, сих несколько?
+    Которое силуэт своих букв переулка вскоре парадигматическая маленькая лучше власти семь курсивных. Он, ты, пор
+    которое великий своего предупредила на берегу пояс все ему буквоград рыбного эта путь вершину пустился дороге.
+    Снова толку, лучше переулка безорфографичный языком рукопись всеми рыбными по всей составитель имени языкового
+    пустился не семь, страну встретил сбить, наш за меня. Имеет даже раз, пор прямо щеке города бросил.
   </p>
   <p class="dotted-title">
     <span class="dotted-title__text">Text</span>
@@ -66,7 +63,7 @@
   <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
   <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
 
-  <!-- @@include('./html/infinite-scroll.html') -->
+  <!-- @@include('./html/components/infinite-scroll.html') -->
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/app.min.js" defer></script>
