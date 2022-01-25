@@ -53,10 +53,10 @@
     background-image: linear-gradient(red, red);
     background-repeat: no-repeat;
     background-position: center bottom;
-    transition: var(--transition-1);
+    transition: var(--transition-2);
   }
   &:active {
-    background-color: red;
+    color: red;
   }
 }
 .hover-underline-1,
@@ -99,8 +99,9 @@
     content: attr(data-typing-text);
     overflow: hidden;
     white-space: nowrap;
+    transition: var(--transition-2);
   }
-  transition: var(--transition-1);
+  transition: var(--transition-2);
   @media (any-hover: hover) {
     &:hover {
       color: inherit;
@@ -158,6 +159,18 @@
 @keyframes hoverScale {
   to {
     background-position: 30% 30%;
+  }
+}
+
+.hover-scale-image {
+  overflow: hidden;
+  img {
+    transition: var(--transition-2);
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 

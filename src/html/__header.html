@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header__container container">
     <a class="header__logo logo responsive-1" href="#">
-      <img src="img/1x1.png" loading="lazy" alt="image">
+      <img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" alt="logo">
     </a>
     <div class="search">
       <input id="searchSwitch" type="checkbox">
@@ -22,8 +22,8 @@
     <input id="navigationSwitch" type="checkbox">
     <label class="toggle-overlay navigation-overlay" for="navigationSwitch"></label>
     <nav class="navigation">
+      <label class="navigation-close" for="navigationSwitch"></label>
       <ul class="navigation__list">
-        <li class="navigation__item"><label class="navigation-close" for="navigationSwitch"></label></li>
         <!-- <li class="navigation__item item-drop-down">
           <input id="sublistSwitch" type="checkbox">
           <label class="navigation__link button-drop-down" for="sublistSwitch">
@@ -42,8 +42,11 @@
         <li class="navigation__item"><a href="contacts.html" target="_blank" class="navigation__link hover-underline-1">Контакты</a></li>
       </ul>
     </nav>
+
+    <a class="header__phone phone" href="tel:+88008888888" data-typing-text="8-800-888-88-88" >8-800-888-88-88</a>
+
     <input class="toggle" id="userSwitch" type="checkbox">
-    <label class="user-button" data-toggle=".authorization" for="userSwitch">
+    <label class="user-button hover-underline-2" data-toggle=".authorization" for="userSwitch">
       <span class="user-button__image responsive-1">
         <img src="img/1x1.png" loading="lazy" alt="image">
       </span>

@@ -1,9 +1,9 @@
 // ===================================================================================================================================================================================================================================================================================================================================================================================================================================
 // ===================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-// cards
+// reviews
 
-.cards {
+.reviews {
   &__container {
   }
   &__title {
@@ -14,9 +14,9 @@
 // ===================================================================================================================================================================================================================================================================================================================================================================================================================================
 // ===================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-// cards list
+// reviews list
 
-.cards-list {
+.reviews {
   display: grid;
   gap: 30px;
   @media (min-width: 1201px) {
@@ -45,7 +45,7 @@
       left: 0;
       top: 0;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(-20deg) rotateY(20deg);
         }
       }
@@ -54,7 +54,7 @@
       left: 33.333%;
       top: 0;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(-20deg) rotateY(0deg);
         }
       }
@@ -63,7 +63,7 @@
       left: 66.666%;
       top: 0;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(-20deg) rotateY(-20deg);
         }
       }
@@ -72,7 +72,7 @@
       left: 0;
       top: 33.333%;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(0deg) rotateY(20deg);
         }
       }
@@ -81,7 +81,7 @@
       left: 33.333%;
       top: 33.333%;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(0deg) rotateY(0deg);
         }
       }
@@ -90,7 +90,7 @@
       left: 66.666%;
       top: 33.333%;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(0deg) rotateY(-20deg);
         }
       }
@@ -99,7 +99,7 @@
       left: 0;
       top: 66.666%;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(20deg) rotateY(20deg);
         }
       }
@@ -108,7 +108,7 @@
       left: 33.333%;
       top: 66.666%;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(20deg) rotateY(0deg);
         }
       }
@@ -117,7 +117,7 @@
       left: 66.666%;
       top: 66.666%;
       @media (any-hover: hover) {
-        &:hover ~ .cards-list__item-content {
+        &:hover ~ .reviews__item-content {
           transform: rotateX(20deg) rotateY(-20deg);
         }
       }
