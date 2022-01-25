@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание страницы сайта." />
   <link rel="icon" href="data:;base64,=">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220120202722" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20220120202722">
-  <title>MAIN TEMPLATE</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220125131846" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220125131846">
+  <title>Главная</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
   <header class="header">
   <div class="header__container container">
     <a class="header__logo logo responsive-1" href="#">
-      <picture><source srcset="img/1x1.webp" type="image/webp"><img src="img/1x1.png" loading="lazy" alt="image"></picture>
+      <picture><source srcset="img/about__image.webp" type="image/webp"><img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" alt="logo"></picture>
     </a>
     <div class="search">
       <input id="searchSwitch" type="checkbox">
@@ -47,8 +47,8 @@
     <input id="navigationSwitch" type="checkbox">
     <label class="toggle-overlay navigation-overlay" for="navigationSwitch"></label>
     <nav class="navigation">
+      <label class="navigation-close" for="navigationSwitch"></label>
       <ul class="navigation__list">
-        <li class="navigation__item"><label class="navigation-close" for="navigationSwitch"></label></li>
         <!-- <li class="navigation__item item-drop-down">
           <input id="sublistSwitch" type="checkbox">
           <label class="navigation__link button-drop-down" for="sublistSwitch">
@@ -67,8 +67,11 @@
         <li class="navigation__item"><a href="contacts.html" target="_blank" class="navigation__link hover-underline-1">Контакты</a></li>
       </ul>
     </nav>
+
+    <a class="header__phone phone" href="tel:+88008888888" data-typing-text="8-800-888-88-88" >8-800-888-88-88</a>
+
     <input class="toggle" id="userSwitch" type="checkbox">
-    <label class="user-button" data-toggle=".authorization" for="userSwitch">
+    <label class="user-button hover-underline-2" data-toggle=".authorization" for="userSwitch">
       <span class="user-button__image responsive-1">
         <picture><source srcset="img/1x1.webp" type="image/webp"><img src="img/1x1.png" loading="lazy" alt="image"></picture>
       </span>
@@ -178,6 +181,14 @@
       Return ( error 400 )
     </a>
   </div>
+  <p class="dotted-title">
+    <span class="dotted-title__text">Text</span>
+    <span class="dotted-title__number">444</span>
+  </p>
+  <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
+  <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
+
+  
   
   
 
@@ -212,6 +223,89 @@
   </div>
 </section>
   
+  <div class="section">
+    <div class="section__container container">
+      <ul class="list-row-image-text show-item">
+  <li class="list-row-image-text__item">
+    <a class="list-row-image-text__item-image responsive-1 hover-scale-image" href="#">
+      <picture><source srcset="img/about__image.webp" type="image/webp"><img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" width="77" height="77" alt="image"></picture>
+    </a>
+    <div class="list-row-image-text__item-information">
+      <p class="list-row-image-text__item-label">Бытовая техника для кухни</p>
+      <p class="list-row-image-text__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        repellendus minima ipsum voluptatibus, omnis ullam quam inventore aliquid temporibus voluptates ea quisquam nisi
+        atque fuga debitis perspiciatis. Sequi, deleniti similique.
+        Vero maxime dolore id quibusdam fuga cum optio quam veniam quae placeat accusantium dolorem libero sequi
+        suscipit consectetur eos quidem, eum cumque. Eveniet asperiores, nostrum repudiandae earum voluptatem enim?
+        Eaque?</p>
+      <a class="list-row-image-text__item-link hover-underline-2" href="#">Все категории...</a>
+    </div>
+  </li>
+  <li class="list-row-image-text__item">
+    <a class="list-row-image-text__item-image responsive-1 hover-scale-image" href="#">
+      <picture><source srcset="img/about__image.webp" type="image/webp"><img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" width="77" height="77" alt="image"></picture>
+    </a>
+    <div class="list-row-image-text__item-information">
+      <p class="list-row-image-text__item-label">Бытовая техника для кухни</p>
+      <p class="list-row-image-text__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        repellendus minima ipsum voluptatibus, omnis ullam quam inventore aliquid temporibus voluptates ea quisquam nisi
+        atque fuga debitis perspiciatis. Sequi, deleniti similique.
+        Vero maxime dolore id quibusdam fuga cum optio quam veniam quae placeat accusantium dolorem libero sequi
+        suscipit consectetur eos quidem, eum cumque. Eveniet asperiores, nostrum repudiandae earum voluptatem enim?
+        Eaque?</p>
+      <a class="list-row-image-text__item-link hover-underline-2" href="#">Все категории...</a>
+    </div>
+  </li>
+  <li class="list-row-image-text__item">
+    <a class="list-row-image-text__item-image responsive-1 hover-scale-image" href="#">
+      <picture><source srcset="img/about__image.webp" type="image/webp"><img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" width="77" height="77" alt="image"></picture>
+    </a>
+    <div class="list-row-image-text__item-information">
+      <p class="list-row-image-text__item-label">Бытовая техника для кухни</p>
+      <p class="list-row-image-text__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        repellendus minima ipsum voluptatibus, omnis ullam quam inventore aliquid temporibus voluptates ea quisquam nisi
+        atque fuga debitis perspiciatis. Sequi, deleniti similique.
+        Vero maxime dolore id quibusdam fuga cum optio quam veniam quae placeat accusantium dolorem libero sequi
+        suscipit consectetur eos quidem, eum cumque. Eveniet asperiores, nostrum repudiandae earum voluptatem enim?
+        Eaque?</p>
+      <a class="list-row-image-text__item-link hover-underline-2" href="#">Все категории...</a>
+    </div>
+  </li>
+  <li class="list-row-image-text__item">
+    <a class="list-row-image-text__item-image responsive-1 hover-scale-image" href="#">
+      <picture><source srcset="img/about__image.webp" type="image/webp"><img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" width="77" height="77" alt="image"></picture>
+    </a>
+    <div class="list-row-image-text__item-information">
+      <p class="list-row-image-text__item-label">Бытовая техника для кухни</p>
+      <p class="list-row-image-text__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        repellendus minima ipsum voluptatibus, omnis ullam quam inventore aliquid temporibus voluptates ea quisquam nisi
+        atque fuga debitis perspiciatis. Sequi, deleniti similique.
+        Vero maxime dolore id quibusdam fuga cum optio quam veniam quae placeat accusantium dolorem libero sequi
+        suscipit consectetur eos quidem, eum cumque. Eveniet asperiores, nostrum repudiandae earum voluptatem enim?
+        Eaque?</p>
+      <a class="list-row-image-text__item-link hover-underline-2" href="#">Все категории...</a>
+    </div>
+  </li>
+  <li class="list-row-image-text__item">
+    <a class="list-row-image-text__item-image responsive-1 hover-scale-image" href="#">
+      <picture><source srcset="img/about__image.webp" type="image/webp"><img src="img/1x1.png" data-src="img/about__image.jpg" loading="lazy" width="77" height="77" alt="image"></picture>
+    </a>
+    <div class="list-row-image-text__item-information">
+      <p class="list-row-image-text__item-label">Бытовая техника для кухни</p>
+      <p class="list-row-image-text__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+        repellendus minima ipsum voluptatibus, omnis ullam quam inventore aliquid temporibus voluptates ea quisquam nisi
+        atque fuga debitis perspiciatis. Sequi, deleniti similique.
+        Vero maxime dolore id quibusdam fuga cum optio quam veniam quae placeat accusantium dolorem libero sequi
+        suscipit consectetur eos quidem, eum cumque. Eveniet asperiores, nostrum repudiandae earum voluptatem enim?
+        Eaque?</p>
+      <a class="list-row-image-text__item-link hover-underline-2" href="#">Все категории...</a>
+    </div>
+  </li>
+
+
+</ul>
+    </div>
+  </div>
   
   
   
@@ -291,8 +385,6 @@
     <div class="js-filter__content-item js-filter__content-item-4">Content 10</div>
   </div>
 </div>
-  
-  
   
   
   <div class="popup" id="popup">
@@ -404,7 +496,6 @@
   
   
   
-  
   <nav class="pagination">
   <button class="pagination__arrow pagination__arrow-back"></button>
   <ul class="pagination__list">
@@ -484,26 +575,17 @@
     </div>
   </div>
 </footer>
-  <p>
-    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Там по всей предложения города
-    жизни живет своих свою, переписывается имени знаках жаренные переулка скатился снова послушавшись осталось?
-    Проектах, сих несколько?
-    Которое силуэт своих букв переулка вскоре парадигматическая маленькая лучше власти семь курсивных. Он, ты, пор
-    которое великий своего предупредила на берегу пояс все ему буквоград рыбного эта путь вершину пустился дороге.
-    Снова толку, лучше переулка безорфографичный языком рукопись всеми рыбными по всей составитель имени языкового
-    пустился не семь, страну встретил сбить, наш за меня. Имеет даже раз, пор прямо щеке города бросил.
+  <div class="copyright">
+  <p class="copyright__name website-name">Main-template</p>
+  <a class="policy-link hover-underline-2" href="policy.html" target="_blank" >Политика конфиденциальности</a>
+  <p class="copyright__author">
+    <span class="copyright__author-text">Разработано:</span>
+    <a class="copyright__author-link hover-underline-2" href="#" target="_blank" >polefed</a>
   </p>
-  <p class="dotted-title">
-    <span class="dotted-title__text">Text</span>
-    <span class="dotted-title__number">444</span>
-  </p>
-  <a class="popup-link show-tooltip" href="#popup" data-tooltip="Tooltip!">Popup-link & tooltip</a>
-  <button class="button-1 hover-background-2" data-toggle=".load-list">Main Button</button>
+</div>
 
-  
-
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220120202722"></script>
-  <script src="js/app.min.js?_v=20220120202722" defer></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220125131846"></script>
+  <script src="js/app.min.js?_v=20220125131846" defer></script>
 </body>
 
 </html>
