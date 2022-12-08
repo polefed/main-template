@@ -1,0 +1,80 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// variables
+
+:root {
+
+  //        Light                    300    
+  //        Regular (Normal)         400    
+  //        Medium                   500    
+  //        Semi-bold                600    
+  //        Bold                     700    
+  //        Extra-bold               800    
+  //        Black                    900    
+
+  // font
+  --font-1: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-2: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-3: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-4: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-5: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-6: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-7: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-8: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-9: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+  --font-10: 500 14px / calc(20 / 14 * 100%) "Segoe UI";
+
+  // transition
+  --transition-1: 0.3s;
+  --transition-2: 0.5s;
+
+  // background
+  --background-1: center/cover no-repeat;
+  --background-2: center/cover fixed;
+  --background-3: right 5px top 50%/2rem no-repeat;
+
+  --spoilerMedia: 992px;
+
+  // color
+  --color-1: #333333;
+  --color-2: #FFFFFF;
+  --color-3: #333333;
+  --color-4: #333333;
+  --color-5: #333333;
+  --color-6: #333333;
+  --color-7: #333333;
+  --color-8: #333333;
+  --color-9: #333333;
+  --color-10: #333333;
+
+  --twitter: #1da1f2;
+  --facebook: #3b5998;
+  --instagram: #833ab4;
+
+  // clip path
+  --triangle: polygon(0 0, 50% 100%, 100% 0);
+  --cross-5: polygon(0 45%, 45% 45%, 45% 0, 55% 0, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0 55%);
+
+  // cross
+  --cross: linear-gradient(45deg, var(--cross-color-2) 45%, var(--cross-color-1) 46%, var(--cross-color-1) 55%, var(--cross-color-2) 56%),
+          linear-gradient(-45deg, var(--cross-color-2) 45%, var(--cross-color-1) 46%, var(--cross-color-1) 55%, var(--cross-color-2) 56%);
+  --cross-color-1: brown;
+  --cross-color-2: transparent;
+
+   // plus
+  --plus: linear-gradient(0deg, var(--plus-color-2) 45%, var(--plus-color-1) 46%, 
+                                  var(--plus-color-1) 55%, var(--plus-color-2) 56%),
+          linear-gradient(90deg, var(--plus-color-2) 45%, var(--plus-color-1) 46%,
+                                  var(--plus-color-1) 55%, var(--plus-color-2) 56%);
+  --plus-color-1: gold;
+  --plus-color-2: transparent;
+
+  // minus
+  --minus: linear-gradient(0deg, var(--minus-color-2) 45%, var(--minus-color-1) 46%, var(--minus-color-1) 55%, var(--minus-color-2) 56%);
+  --minus-color-1: gold;
+  --minus-color-2: transparent;
+
+}
+
+// :root.dark-theme {}
